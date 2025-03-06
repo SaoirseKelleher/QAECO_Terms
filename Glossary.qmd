@@ -1,0 +1,200 @@
+---
+title: "Glossary of terms in statistics and (R) programming"
+abstract: "This document provides brief definitions of key terms in statistics and programming, with an emphasis on words with definitions that vary between these fields."
+abstract-title: Summary
+format: 
+  html: 
+    theme: flatly
+    toc: true
+title-block-banner: true
+embed-resources: true
+---
+
+# Maths and Statistics
+
+## General statistics
+
+**Equation**
+
+**Variable**
+
+::: callout-warning
+## Definition differs from programming - see below
+:::
+
+**Function**
+
+## Models
+
+These terms relate to modelling, defined broadly.
+
+**Equation**
+
+**Response variable**
+
+**Coefficient**
+
+**Fixed effect**
+
+**Random effect**
+
+## Frequentist statistics
+
+These terms relate to Frequentist statistical frameworks.
+
+## Bayesian statistics
+
+These terms relate to Bayesian statistical frameworks.
+
+**Prior**
+
+**Posterior**
+
+**Monte Carlo Markov Chain**
+
+# Programming
+
+These are split between general programming terms common to various other languages.
+
+## General programming
+
+These terms relate to programming in general, not just R. However, the definitions used here will most closely apply to R.
+
+**Language**
+
+R, Python, C, Java, etc - any 'language' is a set of rules for writing instructions for computers.
+
+**Integrated development environment (IDE)**
+
+The interface for interacting with your code - for most R users, this is 'RStudio.' Some of them with multiple languages (VScode), others are more specialised like RStudio/Anaconda.
+
+**Terminal**
+
+Direct command line to your whole computer - *not* R specific, but occasionally things might be run in the terminal to access things outside of R.
+
+**Console**
+
+Basically the R-specific terminal - this is where your code runs, even if you're using scripts or other things. When you're using RStudio, the console is the only thing that is actually R - everything else is just features to help you more easily write and run code.
+
+**Environment**
+
+**Directory**
+
+## R programming
+
+These terms relate to the R language specifically. We highlight terms that differ from programming more broadly.
+
+### Object classes
+
+In R, every *object* has a class, which defines what type of data is represented in the object. Nearly everything in R is an object - vectors, dataframes, functions, and the elements inside each of those objects.
+
+**Vector**
+
+A vector in R is an ordered collection of *objects* which have a shared type - i.e., every item in a *character* vector must be the same class. Vectors are one-dimensional.
+
+The definition of a vector in R differs from other programming language - what we call a 'vector' in R is a called an 'atomic vector' in many other languages.
+
+**List\
+**An ordered collection of elements, which do not necessarily have the same types. Each element in a list can have a name. Lists can be nested and contain pretty much any class of object.
+
+Often called a vector in other programming languages.
+
+**Dataframe**
+
+Technically a list of vectors, each of which has the same length. Each column is an atomic vector with the same type, but dataframes can have columns with a bunch of different types. These are often called 'tables' in other languages.
+
+'Tibbles' are similar to dataframes, but are specific to the `tidyverse` suite of R packages. They have a few additional features, but the underlying data is usually just a simple dataframe. Kiwi accent with table.
+
+**Matrix**
+
+'Vector of vectors,' where each vector is the same type. These are commonly used for statistics in R - they are computationally cheaper than dataframes, and their structure often reflects common statistical notation.
+
+**Array**
+
+An 'array' is a matrix with more than two dimensions.
+
+**Function**
+
+### Atomic vector types
+
+Atomic vectors types are the lowest-level of categorisation in R objects. These represent the basic types of data, with varying rules on what can go into them. Vectors have a hierarchy ranging from simple to complex - R will force everything in a vector into the simplest possible type.
+
+**Logical**
+
+TRUE or FALSE binary data.
+
+**Integer**
+
+Numeric data with whole numbers only.
+
+**Double**
+
+Numeric data with decimals.
+
+**Character (String)**
+
+Text-based data
+
+**Factor**
+
+Text-based data with defined levels. Factor levels can be levelled.
+
+### Functions
+
+**Arguments**
+
+**Documentation**
+
+**Errors**
+
+**Warnings**
+
+### Working with objects
+
+**Indexing**
+
+The 'index' is the position of an element in an object. For example, the index of the second element in a vector `2`. Likewise, the value of the second row and fourth column of a dataframe would be `2,4`. 'Indexing' is selecting one of these elements of an object.
+
+Indexing in R is a bit different from some other languages: The first element in a vector in R is index `1`, where the first element in Python is index `0`.
+
+### Writing code
+
+**Project**
+
+**Directory/Working directory**
+
+Just a folder on your computer. All instructions in programming are relative. The working directory is where your code is running - every file path, save location, etc is relative to the working directory. The working directory points R to a location on your computer. Whenever you ask R to do something,
+
+**Filepath**
+
+A location on your computer. There are two types of file paths: **Absolute filepaths** describe exactly where something is on your computer starting from the root direct (C:// on windows, /user on Mac). **Relative filepaths** start from your working directory, and only contains the additional parts of the filepath needed to get them from the working directory.
+
+**Script**
+
+**Markdown**
+
+### Running code
+
+**Environment**
+
+The environment is the context that you're working in - it's what R knows exists and is able to interact with. There are several different nested environments; the most important one is the **global environment.**
+
+**Run**
+
+**Source**
+
+### Iteration
+
+**Loop**
+
+**For**
+
+**While**
+
+### Control flow
+
+**Error**
+
+**Warning**
+
+**Break**
